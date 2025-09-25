@@ -1,0 +1,8 @@
+with open("exmpl.txt", "r") as f:
+    A = f.read()
+a=A.count(".")
+b=A.count("?")
+c=A.count("!")
+d=A.count("?!")
+f=A.count("...")
+print(a+b+c-d-2*f)
