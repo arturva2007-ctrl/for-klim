@@ -1,0 +1,11 @@
+
+a=input()
+c = list(map(int, a.split()))#это я загуглил я не понял как вводить масив с клавиатуры
+b=len(c)
+i=0
+while i<(b-1):
+    d=c[i+1]
+    c.insert(i,(d))
+    c.pop((i+2))
+    i=i+2
+print(c)
