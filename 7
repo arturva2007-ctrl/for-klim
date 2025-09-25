@@ -1,0 +1,16 @@
+a=input()
+c = list(map(int, a.split()))
+b=len(c)
+q=max(c)
+p=min(c)
+i=0
+j=0
+while j<b and i<b:
+    if c.count(c[i])>=c.count(c[j]):
+        j=j+1
+        if j==b-1:
+          print(c[i])
+    else:
+        i=i+1
+if p==q:# если масив из 1 эл
+    print(p)
