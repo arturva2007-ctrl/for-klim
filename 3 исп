@@ -1,0 +1,31 @@
+A=input()
+N=A.count("2")+A.count("3")+A.count("4")+A.count("5")+A.count("6")+A.count("7")+A.count("9")
+M=A.count("A")+A.count("B")+A.count("C")+A.count("D")+A.count("E")+A.count("F")+A.count("G")+A.count("J")+A.count("K")+A.count("L")+A.count("N")+A.count("P")+A.count("Q")+A.count("R")+A.count("S")+A.count("Z")
+i=1
+j=0
+g=len(A)
+C=A[g-1]
+while i<g:
+ B=A[g-i-1]
+ C=C+B
+ i=i+1
+P=["E","J","S","Z"]#EA3 3AE 3A3
+Q=["3","L","2","5"]
+D=C
+H=A
+while j<4:
+  q=P[j]
+  p=Q[j]
+  c=H.replace(q,p)
+  b=D.replace(q,p)
+  H=c
+  D=b
+  j=j+1
+if  A==C and (M+N)==0:
+    print(A, "is a mirrored palindrome.")
+elif A==C:
+       print(A, "is a palindrome.")
+elif D==H:
+       print(A, "is a mirrored string.")
+else:
+       print(A, "is not a palindrome.")
